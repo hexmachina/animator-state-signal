@@ -111,7 +111,7 @@ namespace UnityEditor.AnimatorStateSignals
 			}
 		}
 
-		protected override float GetCustomRowHeight(int row, TreeViewItem<int> treeItem)
+		protected override float GetCustomRowHeight(int row, TreeViewItem treeItem)
 		{
 			var item = treeItem as AnimatorStateSignalReceiverItem;
 			return item.GetHeight() + k_VerticalPadding;

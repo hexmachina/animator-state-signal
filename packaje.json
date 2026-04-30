@@ -1,0 +1,7 @@
+{
+    "name": "com.tw.animator-state-signal",
+    "version": "1.0.0",
+    "unity": "6000.3",
+    "displayName": "Animator State Signal",
+    "description": "Listen for signal events in an Animator Controller"
+}

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace UnityEditor.AnimatorStateSignals
 {
-	public class AnimatorStateSignalReceiverTreeView : TreeView<int>
+	public class AnimatorStateSignalReceiverTreeView : TreeView
 	{
 		public bool dirty { private get; set; }
 
@@ -17,7 +17,7 @@ namespace UnityEditor.AnimatorStateSignals
 		const float k_VerticalPadding = 5;
 		const float k_HorizontalPadding = 5;
 
-		public AnimatorStateSignalReceiverTreeView(TreeViewState<int> state, MultiColumnHeader multiColumnHeader, AnimatorStateSignalReceiver receiver, SerializedObject serializedObject)
+		public AnimatorStateSignalReceiverTreeView(TreeViewState state, MultiColumnHeader multiColumnHeader, AnimatorStateSignalReceiver receiver, SerializedObject serializedObject)
 			: base(state, multiColumnHeader)
 		{
 			m_Target = receiver;
@@ -83,9 +83,9 @@ namespace UnityEditor.AnimatorStateSignals
 			};
 		}
 
-		protected override TreeViewItem<int> BuildRoot()
+		protected override TreeViewItem BuildRoot()
 		{
-			var root = new TreeViewItem<int>(-1, -1) { children = new List<TreeViewItem<int>>() };
+			var root = new TreeViewItem(-1, -1) { children = new List<TreeViewItem>() };
 
 			var matchingId = signalAssetContext != null && readonlySignals ? FindIdForSignal(signals, signalAssetContext) : -1;
 			if (matchingId >= 0)
@@ -117,7 +117,7 @@ namespace UnityEditor.AnimatorStateSignals
 			return item.GetHeight() + k_VerticalPadding;
 		}
 
-		void AddItem(TreeViewItem<int> root, int id, bool enabled = true)
+		void AddItem(TreeViewItem root, int id, bool enabled = true)
 		{
 			var signal = signals.GetArrayElementAtIndex(id);
 			var evt = events.GetArrayElementAtIndex(id);

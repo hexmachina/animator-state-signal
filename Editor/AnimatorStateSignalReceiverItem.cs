@@ -9,7 +9,7 @@ using Object = UnityEngine.Object;
 
 namespace UnityEditor.AnimatorStateSignals
 {
-	public class AnimatorStateSignalReceiverItem : TreeViewItem<int>, IBehaviorSignalProvider
+	public class AnimatorStateSignalReceiverItem : TreeViewItem, IBehaviorSignalProvider
 	{
 		static readonly AnimatorStateSignalEventDrawer k_EvtDrawer = new AnimatorStateSignalEventDrawer();
 

@@ -10,7 +10,7 @@ namespace UnityEditor.AnimatorStateSignals
 	{
 		AnimatorStateSignalReceiver m_Target;
 
-		[SerializeField] TreeViewState<int> m_TreeState;
+		[SerializeField] TreeViewState m_TreeState;
 		[SerializeField] MultiColumnHeaderState m_MultiColumnHeaderState;
 		internal AnimatorStateSignalReceiverTreeView m_TreeView;
 

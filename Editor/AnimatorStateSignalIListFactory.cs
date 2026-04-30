@@ -5,7 +5,7 @@ namespace UnityEditor.AnimatorStateSignals
 {
 	static class AnimatorStateSignalListFactory
 	{
-		public static AnimatorStateSignalReceiverTreeView CreateSignalInspectorList(TreeViewState<int> state, AnimatorStateSignalReceiverHeader header, AnimatorStateSignalReceiver target, SerializedObject so)
+		public static AnimatorStateSignalReceiverTreeView CreateSignalInspectorList(TreeViewState state, AnimatorStateSignalReceiverHeader header, AnimatorStateSignalReceiver target, SerializedObject so)
 		{
 			return new AnimatorStateSignalReceiverTreeView(state, header, target, so);
 		}
@@ -22,9 +22,9 @@ namespace UnityEditor.AnimatorStateSignals
 			return new MultiColumnHeaderState(AnimatorStateSignalReceiverTreeView.GetColumns());
 		}
 
-		public static TreeViewState<int> CreateViewState()
+		public static TreeViewState CreateViewState()
 		{
-			return new TreeViewState<int>();
+			return new TreeViewState();
 		}
 	}
 }

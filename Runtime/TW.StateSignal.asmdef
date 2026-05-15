@@ -1,5 +1,5 @@
 {
-    "name": "StateSignal",
+    "name": "TW.StateSignal",
     "rootNamespace": "TW.StateSignal",
     "references": [],
     "includePlatforms": [],
